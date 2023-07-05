@@ -13,9 +13,6 @@ public class AcaoService {
     @Autowired
     private AcaoRepositorie repo;
 
-    @Autowired
-    private Acao acao;
-
     public Acao findByTicket(String ticket){
         return repo.findByTicket(ticket);
     }

@@ -12,9 +12,6 @@ public class FiiService {
     @Autowired
     private FiiRepositorie repo;
 
-    @Autowired
-    private Fii fii;
-
     public Fii findByTicket(String ticket) {
         return repo.findByTicket(ticket);
     }

@@ -2,6 +2,11 @@ package com.wallet.wallet.entities;
 
 import java.util.Date;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_acao")
 public class Acao extends Ativo {
 
 
