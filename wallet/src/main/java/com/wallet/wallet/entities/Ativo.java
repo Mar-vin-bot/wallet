@@ -2,18 +2,17 @@ package com.wallet.wallet.entities;
 
 import java.util.Date;
 
-//import jakarta.persistence.Entity;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
-import jakarta.persistence.MappedSuperclass;
-//import jakarta.persistence.Table;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
-//@Entity
-//@Table(name = "ativo")
-@MappedSuperclass
+@Entity
+@Table(name = "ativo")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Ativo {
 
@@ -26,6 +25,9 @@ public class Ativo {
     private Double price;
     private Integer amount;
     private Date dateOperation;
+
+    @OneToMany
+    private Rendimentos rendimentos;
 
 
     public Ativo() {

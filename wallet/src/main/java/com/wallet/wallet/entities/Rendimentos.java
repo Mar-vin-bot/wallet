@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -21,15 +22,18 @@ public class Rendimentos {
     private String typeOfAtivo;
     private Double valueIncome;
     private Date dateOfPayment;
+    @ManyToOne
+    private Ativo ativo;
 
 
-    public Rendimentos(Integer id, String ticket, String typeOfIncome, String typeOfAtivo, Double valueIncome, Date dateOfPayment) {
+    public Rendimentos(Integer id, String ticket, String typeOfIncome, String typeOfAtivo, Double valueIncome, Date dateOfPayment, Ativo ativo) {
         this.id = id;
         this.ticket = ticket;
         this.typeOfIncome = typeOfIncome;
         this.typeOfAtivo = typeOfAtivo;
         this.valueIncome = valueIncome;
         this.dateOfPayment = dateOfPayment;
+        this.ativo = ativo;
     }
 
 
