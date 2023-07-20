@@ -4,12 +4,11 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
+
 
 import com.wallet.wallet.entities.Rendimentos;
 
-@Repository
-public interface RendimentosRepositorie extends JpaRepository <Rendimentos, Integer> {
+public interface RendimentosRepositorie extends JpaRepository <Rendimentos, Long> {
 
 
     @Query("SELECT a FROM Acao a WHERE a.ticket = ?1")

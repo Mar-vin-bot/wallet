@@ -15,14 +15,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+
 @Entity
-@Table(name = "tb_acao")
+@Table(name = "tb_FII")
 @Getter
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class Acao {
+public class FII {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,8 +34,7 @@ public class Acao {
     private Date dt_operacao;
     private String buyOrSell;
 
-
-    public Acao(Long id, String ticker, Double price, Integer qtd_compra, Date dt_operacao, String buyOrSell) {
+    public FII(Long id, String ticker, Double price, Integer qtd_compra, Date dt_operacao, String buyOrSell) {
         this.id = id;
         this.ticker = ticker;
         this.price = price;
@@ -42,6 +42,8 @@ public class Acao {
         this.dt_operacao = dt_operacao;
         this.buyOrSell = buyOrSell;
     }
+
+
 
 
 }

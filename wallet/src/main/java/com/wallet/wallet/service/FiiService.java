@@ -3,16 +3,16 @@ package com.wallet.wallet.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.wallet.wallet.entities.Fii;
-import com.wallet.wallet.repositorie.FiiRepositorie;
+import com.wallet.wallet.entities.FII;
+import com.wallet.wallet.repositorie.FIIRepositorie;
 
 @Service
 public class FiiService {
 
     @Autowired
-    private FiiRepositorie repo;
+    private FIIRepositorie repo;
 
-    public Fii findByTicket(String ticket) {
+    public FII findByTicket(String ticket) {
         return repo.findByTicket(ticket);
     }
 

@@ -2,14 +2,14 @@ package com.wallet.wallet.repositorie;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
-import com.wallet.wallet.entities.Fii;
+import com.wallet.wallet.entities.FII;
 
-@Repository
-public interface FiiRepositorie extends CrudRepository <Fii, Integer>{
+
+
+public interface FIIRepositorie extends CrudRepository <FII, Long>{
 
     @Query("SELECT a FROM Acao a WHERE a.ticket = ?1")
-     Fii findByTicket(String ticket);
+     FII findByTicket(String ticket);
     
 }
